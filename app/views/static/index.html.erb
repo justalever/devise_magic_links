@@ -1,0 +1,14 @@
+<div class="container mx-auto py-16">
+  <div class="flex items-center justify-center gap-3">
+
+    <% if user_signed_in? %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "underline font-medium" %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "underline font-medium" %>
+
+      <%= link_to "Sign up", new_user_registration_path, class: "underline font-medium" %>
+    <% end %>
+  </div>
+
+  <h1>Hello World</h1>
+</div>
